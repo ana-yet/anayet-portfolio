@@ -91,7 +91,7 @@ const Experience = () => {
                     <ul className="space-y-2 text-sm text-gray-300">
                       {exp.achievements.map((achievement, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <FaCheckCircle className="text-green-400 mt-1 flex-shrink-0" />
+                          <FaCheckCircle className="text-green-400 mt-1 shrink-0" />
                           <span>{achievement}</span>
                         </li>
                       ))}

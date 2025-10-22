@@ -82,7 +82,7 @@ const GitHub = () => {
         >
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
             <FaGithub className="text-primary" />
-            Clean Code I'm Proud Of
+            Clean Code I&apos;m Proud Of
           </h3>
 
           {/* Code Block */}
