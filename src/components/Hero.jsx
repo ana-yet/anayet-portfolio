@@ -15,8 +15,8 @@ const Hero = () => {
   const roles = [
     "MERN Stack Developer",
     "Full Stack Engineer",
-    "React Specialist",
     "Node.js Expert",
+    "React Specialist",
   ];
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Hero = () => {
 
     const timer = setTimeout(handleType, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed]);
+  }, [text, isDeleting, loopNum, typingSpeed, roles]);
 
   // Particle generation
   const particles = Array.from({ length: 50 });
@@ -85,7 +85,8 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-4">
-            Hi, I'm <span className="gradient-text">{personalInfo.name}</span>{" "}
+            Hi, I&apos;m{" "}
+            <span className="gradient-text">{personalInfo.name}</span>
             👋
           </h1>
 
@@ -106,7 +107,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection("projects")}
-              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold hover:shadow-xl hover:shadow-primary/50 transition-all"
+              className="px-8 py-4 bg-linear-to-r from-primary to-secondary rounded-full font-semibold hover:shadow-xl hover:shadow-primary/50 transition-all"
             >
               View My Work
             </motion.button>
@@ -116,7 +117,7 @@ const Hero = () => {
               onClick={() => scrollToSection("contact")}
               className="px-8 py-4 glass rounded-full font-semibold hover:bg-dark-lighter transition-all"
             >
-              Let's Talk
+              Let&apos;s Talk
             </motion.button>
           </div>
 
@@ -142,7 +143,7 @@ const Hero = () => {
                 transition={{ delay: 0.8 + index * 0.2 }}
                 className="glass p-4 rounded-lg font-mono text-sm text-left"
               >
-                <div className={snippet.color}>// {snippet.lang}</div>
+                <div className={snippet.color}> {snippet.lang}</div>
                 <div className="text-gray-300">{snippet.code}</div>
               </motion.div>
             ))}
