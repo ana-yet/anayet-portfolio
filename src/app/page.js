@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="relative overflow-x-hidden">
       <Navbar />
       <Hero />
+      <About />
       <TechStack />
       <Projects />
       <Skills />
