@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaDatabase, FaServer, FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt, FaAmazon } from "react-icons/fa";
+
+import { techStack } from "@/lib/data";
 import {
-  SiMongodb,
+  SiDocker,
   SiExpress,
+  SiMongodb,
+  SiRedux,
   SiTailwindcss,
   SiTypescript,
-  SiDocker,
-  SiAmazonaws,
 } from "react-icons/si";
-import { techStack } from "@/lib/data";
 
 const TechStack = () => {
   const mainTechs = [
@@ -21,10 +22,10 @@ const TechStack = () => {
   ];
 
   const additionalTools = [
-    { name: "Git", icon: "fab fa-git-alt", color: "text-orange-500" },
+    { name: "Git", icon: FaGitAlt, color: "#F1502F" },
     { name: "Docker", icon: SiDocker, color: "#2496ED" },
-    { name: "AWS", icon: SiAmazonaws, color: "#FF9900" },
-    { name: "Redux", color: "text-purple-400" },
+    { name: "AWS", icon: FaAmazon, color: "#FF9900" },
+    { name: "Redux", icon: SiRedux, color: "#764ABC" },
     { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
     { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   ];

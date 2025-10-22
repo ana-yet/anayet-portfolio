@@ -1,13 +1,13 @@
-import Navbar from "@/components/Navbar";
+import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
+import GitHub from "@/components/GitHub";
 import Hero from "@/components/Hero";
-import TechStack from "@/components/TechStack";
+import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import GitHub from "@/components/GitHub";
+import TechStack from "@/components/TechStack";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
