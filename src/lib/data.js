@@ -16,6 +16,144 @@ export const personalInfo = {
   },
 };
 
+// Add to existing data.js file
+
+export const aboutMe = {
+  title: "Full Stack Developer & Problem Solver",
+  description:
+    "I'm a passionate MERN stack developer who loves turning complex problems into simple, beautiful, and intuitive solutions. With over 4 years of experience, I've helped startups and enterprises build scalable web applications that users love.",
+
+  image: "/images/profile.jpg", // Add your image to public/images/
+
+  story: [
+    "My journey into web development started in 2019 when I built my first website for a local business. The excitement of seeing my code come to life and actually help someone solve a real problem got me hooked.",
+    "Since then, I've dedicated myself to mastering the MERN stack and modern web technologies. I believe in writing clean, maintainable code and creating exceptional user experiences.",
+    "When I'm not coding, you'll find me contributing to open-source projects, writing technical blogs, or mentoring aspiring developers. I'm a firm believer in giving back to the community that taught me so much.",
+  ],
+
+  highlights: [
+    {
+      metric: "4+",
+      label: "Years Experience",
+      icon: "FaBriefcase",
+    },
+    {
+      metric: "50+",
+      label: "Projects Completed",
+      icon: "FaProjectDiagram",
+    },
+    {
+      metric: "30+",
+      label: "Happy Clients",
+      icon: "FaUsers",
+    },
+    {
+      metric: "500+",
+      label: "GitHub Contributions",
+      icon: "FaCode",
+    },
+  ],
+
+  values: [
+    {
+      title: "Clean Code",
+      description:
+        "I believe in writing code that's not just functional, but maintainable and scalable.",
+      icon: "FaCode",
+    },
+    {
+      title: "User-Centric",
+      description:
+        "Every line of code I write is with the end-user experience in mind.",
+      icon: "FaHeart",
+    },
+    {
+      title: "Continuous Learning",
+      description:
+        "Technology evolves rapidly, and so do I. Always learning, always growing.",
+      icon: "FaBook",
+    },
+    {
+      title: "Collaboration",
+      description:
+        "Great products are built by great teams. I thrive in collaborative environments.",
+      icon: "FaHandshake",
+    },
+  ],
+
+  education: [
+    {
+      degree: "Bachelor of Computer Science",
+      institution: "University of Technology",
+      year: "2016 - 2020",
+      description:
+        "Graduated with honors, specializing in Software Engineering and Web Technologies.",
+    },
+  ],
+
+  certifications: [
+    {
+      name: "MongoDB Certified Developer",
+      issuer: "MongoDB University",
+      year: "2023",
+      icon: "SiMongodb",
+    },
+    {
+      name: "AWS Certified Solutions Architect",
+      issuer: "Amazon Web Services",
+      year: "2022",
+      icon: "FaAws",
+    },
+    {
+      name: "Meta React Advanced Certification",
+      issuer: "Meta (Coursera)",
+      year: "2022",
+      icon: "FaReact",
+    },
+  ],
+
+  currentFocus: [
+    "Building AI-powered web applications",
+    "Exploring Web3 and Blockchain integration",
+    "Mastering Next.js 14+ and Server Components",
+    "Contributing to open-source MERN stack tools",
+  ],
+
+  interests: [
+    {
+      name: "Open Source",
+      icon: "FaGithub",
+      description: "Active contributor to React and Node.js ecosystems",
+    },
+    {
+      name: "Tech Blogging",
+      icon: "FaPencilAlt",
+      description: "Sharing knowledge on Dev.to and Medium",
+    },
+    {
+      name: "Photography",
+      icon: "FaCamera",
+      description: "Capturing moments when not capturing bugs",
+    },
+    {
+      name: "Gaming",
+      icon: "FaGamepad",
+      description: "Strategy games and indie titles enthusiast",
+    },
+  ],
+
+  funFacts: [
+    "☕ Coffee consumption: ~4 cups/day (yes, I've tried quitting)",
+    "🐛 First bug fixed: Forgot to close a div tag (we've all been there)",
+    "🌙 Night owl: Best code written between 10 PM - 2 AM",
+    "🎮 Coded my first game at 15: A snake game in Python",
+    "📚 Reading: Currently on 'Clean Architecture' by Uncle Bob",
+    "🎵 Coding playlist: Lo-fi hip hop & synthwave",
+  ],
+
+  resumeUrl: "/resume.pdf", // Add your resume to public folder
+};
+
 export const techStack = [
   {
     id: 1,
