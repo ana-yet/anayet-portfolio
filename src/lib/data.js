@@ -93,9 +93,9 @@ export const aboutMe = {
 
   certifications: [
     {
-      name: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
-      year: "2023",
+      name: "Complete Web Development Course With Programming Hero",
+      issuer: "Jhankar Mahhub",
+      year: "2025",
       icon: "SiMongodb",
     },
     {

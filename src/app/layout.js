@@ -20,7 +20,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata = {
-  title: "John Doe - MERN Stack Developer",
+  title: "MD ANAYET MIAH - MERN Stack Developer",
   description:
     "Full-stack developer specializing in MongoDB, Express, React, and Node.js. Building scalable web applications with modern technologies.",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata = {
     "MongoDB",
     "Web Development",
   ],
-  authors: [{ name: "John Doe" }],
+  authors: [{ name: "MD ANAYET MIAH" }],
   openGraph: {
     title: "John Doe - MERN Stack Developer",
     description:
@@ -43,9 +43,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Doe - MERN Stack Developer",
+    title: "MD ANAYET MIAH - MERN Stack Developer",
     description: "Full-stack developer specializing in MERN stack",
-    creator: "@johndoe",
+    creator: "@anayet",
   },
   robots: {
     index: true,

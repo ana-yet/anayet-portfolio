@@ -424,7 +424,7 @@ const About = () => {
         >
           <h3 className="text-3xl font-bold mb-4">Want to work together?</h3>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
