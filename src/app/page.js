@@ -1,7 +1,27 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import TechStack from "@/components/TechStack";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import GitHub from "@/components/GitHub";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      Anayet portfolio
-    </div>
+    <main className="relative overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <TechStack />
+      <Projects />
+      <Skills />
+      <Experience />
+      <GitHub />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
