@@ -23,7 +23,7 @@ export const aboutMe = {
   description:
     "I'm a passionate MERN stack developer who loves turning complex problems into simple, beautiful, and intuitive solutions. With over 4 years of experience, I've helped startups and enterprises build scalable web applications that users love.",
 
-  image: "/images/profile.jpg", // Add your image to public/images/
+  image: "/me.png",
 
   story: [
     "My journey into web development started in 2019 when I built my first website for a local business. The excitement of seeing my code come to life and actually help someone solve a real problem got me hooked.",
@@ -83,9 +83,9 @@ export const aboutMe = {
 
   education: [
     {
-      degree: "Bachelor of Computer Science",
-      institution: "University of Technology",
-      year: "2016 - 2020",
+      degree: "Bachelor of Social Science",
+      institution: "National University of Bangladesh",
+      year: "2025 - present",
       description:
         "Graduated with honors, specializing in Software Engineering and Web Technologies.",
     },
