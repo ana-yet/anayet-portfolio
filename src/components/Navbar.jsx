@@ -46,7 +46,7 @@ const Navbar = () => {
             className="text-2xl font-display font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
           >
-            &lt;JD/&gt;
+            &lt;AM/&gt;
           </motion.a>
 
           {/* Desktop Menu */}
