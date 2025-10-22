@@ -11,6 +11,7 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  const [particles, setParticles] = useState([]);
 
   const roles = [
     "MERN Stack Developer",
@@ -19,6 +20,28 @@ const Hero = () => {
     "React Specialist",
   ];
 
+  // Generate particles only on client side
+  useEffect(() => {
+    // Skip on server-side render to prevent hydration mismatch
+    if (typeof window === "undefined") return;
+
+    // Use requestAnimationFrame to defer state update
+    const generateParticles = () => {
+      const generatedParticles = Array.from({ length: 50 }, (_, i) => ({
+        id: i,
+        initialX: Math.floor(Math.random() * 1000),
+        initialY: Math.floor(Math.random() * 600),
+        animateY: Math.floor(Math.random() * 600),
+        duration: Math.floor(Math.random() * 10) + 5,
+      }));
+      setParticles(generatedParticles);
+    };
+
+    // Defer particle generation to next animation frame
+    requestAnimationFrame(generateParticles);
+  }, []);
+
+  // Effect for typing animation
   useEffect(() => {
     const handleType = () => {
       const i = loopNum % roles.length;
@@ -44,35 +67,34 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [text, isDeleting, loopNum, typingSpeed, roles]);
 
-  // Particle generation
-  const particles = Array.from({ length: 50 });
-
   return (
     <section
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* Particles Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {particles.map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-primary/50 rounded-full"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{
-              y: [null, Math.random() * window.innerHeight],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 5,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-        ))}
-      </div>
+      {/* Particles Background - only render when particles are available */}
+      {particles.length > 0 && (
+        <div className="absolute inset-0 overflow-hidden">
+          {particles.map((particle) => (
+            <motion.div
+              key={particle.id}
+              className="absolute w-1 h-1 bg-primary/50 rounded-full"
+              initial={{
+                x: particle.initialX,
+                y: particle.initialY,
+              }}
+              animate={{
+                y: [null, particle.animateY],
+              }}
+              transition={{
+                duration: particle.duration,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-card to-dark-bg opacity-90" />
@@ -107,7 +129,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection("projects")}
-              className="px-8 py-4 bg-linear-to-r from-primary to-secondary rounded-full font-semibold hover:shadow-xl hover:shadow-primary/50 transition-all"
+              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold hover:shadow-xl hover:shadow-primary/50 transition-all"
             >
               View My Work
             </motion.button>

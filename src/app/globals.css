@@ -1,45 +1,43 @@
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --font-inter: "Inter", sans-serif;
-    --font-space-grotesk: "Space Grotesk", sans-serif;
-    --font-fira-code: "Fira Code", monospace;
-  }
+/*
+ * Use the `@theme` directive to add custom values to your theme.
+ * These values will be used to generate custom CSS properties and utility classes.
+ */
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-fira-code: "Fira Code", monospace;
+
+  --color-primary: #6366f1;
+  --color-secondary: #8b5cf6;
+  --color-accent: #ec4899;
+  --color-dark-bg: #0a0e27;
+  --color-dark-card: #1a1f3a;
+  --color-dark-lighter: #252b4a;
 }
 
-@layer utilities {
-  .gradient-text {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+/*
+ * Use the `@utility` directive to register custom utility classes that
+ * Tailwind can safely purge and optimize.
+ */
+@utility gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-  .glass {
-    background: rgba(26, 31, 58, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
+@utility glass {
+  background: rgba(26, 31, 58, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-  .gradient-border {
-    position: relative;
-    background: #1a1f3a;
-    border-radius: 1rem;
-  }
-
-  .gradient-border::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 1rem;
-    padding: 2px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
+@utility gradient-border {
+  position: relative;
+  background: #1a1f3a;
+  border-radius: 1rem;
 }
 
 /* Custom Scrollbar */
@@ -58,6 +56,19 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #8b5cf6, #ec4899);
+}
+
+/* Gradient border pseudo-element */
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 /* Smooth Scrolling */

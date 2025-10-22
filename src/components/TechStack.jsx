@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaGitAlt, FaAmazon } from "react-icons/fa";
-
-import { techStack } from "@/lib/data";
 import {
   SiDocker,
   SiExpress,
@@ -13,6 +11,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+import { techStack } from "@/lib/data";
 const TechStack = () => {
   const mainTechs = [
     { name: "MongoDB", icon: SiMongodb, color: "#47A248", size: "large" },
