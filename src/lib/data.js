@@ -111,40 +111,41 @@ export const aboutMe = {
   currentFocus: [
     "Building AI-powered web applications using the MERN stack",
     "Mastering Next.js 16 and modern server components",
-    // "Improving backend performance and API scalability",
-    // "Learning advanced problem-solving and software architecture",
   ],
 
   interests: [
     {
-      name: "Open Source",
-      icon: "FaGithub",
-      description: "Active contributor to React and Node.js ecosystems",
-    },
-    {
-      name: "Tech Blogging",
-      icon: "FaPencilAlt",
-      description: "Sharing knowledge on Dev.to and Medium",
-    },
-    {
-      name: "Photography",
-      icon: "FaCamera",
-      description: "Capturing moments when not capturing bugs",
+      name: "Reading & Learning",
+      icon: "FaBookOpen",
+      description:
+        "I love reading books, blogs, and listening to podcasts to expand my knowledge in tech, history, and self-growth.",
     },
     {
       name: "Gaming",
       icon: "FaGamepad",
-      description: "Strategy games and indie titles enthusiast",
+      description:
+        "I enjoy strategy and story driven games that challenge my mind and creativity.",
+    },
+    {
+      name: "AI & Technology",
+      icon: "FaRobot",
+      description:
+        "I actively follow AI trends and love exploring how artificial intelligence can be integrated into modern web applications.",
+    },
+    {
+      name: "Chess & Nature Walks",
+      icon: "FaLeaf",
+      description:
+        "Playing chess and walking alone in nature helps me think clearly and stay mentally refreshed.",
     },
   ],
 
   funFacts: [
-    "☕ Coffee consumption: ~4 cups/day (yes, I've tried quitting)",
-    "🐛 First bug fixed: Forgot to close a div tag (we've all been there)",
-    "🌙 Night owl: Best code written between 10 PM - 2 AM",
-    "🎮 Coded my first game at 15: A snake game in Python",
-    "📚 Reading: Currently on 'Clean Architecture' by Uncle Bob",
-    "🎵 Coding playlist: Lo-fi hip hop & synthwave",
+    "☀️ I write my best code in the morning fresh mind, clear focus.",
+    "🍵 Tea is my ultimate coding fuel.",
+    "🐛 my first bugs was forgetting to add '/' in a pathname took hours to find!",
+    "💻 My first programming language was C, which taught me logic and discipline.",
+    "📚 I’m currently reading books to improve both technical and personal growth.",
   ],
 
   resumeUrl: "/resume.pdf", // Add your resume to public folder

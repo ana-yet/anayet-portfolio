@@ -23,6 +23,9 @@ import {
   FaLightbulb,
   FaRocket,
   FaLaptopCode,
+  FaBookOpen,
+  FaRobot,
+  FaLeaf,
 } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { aboutMe } from "@/lib/data";
@@ -46,6 +49,9 @@ const About = () => {
     FaAws,
     SiMongodb,
     FaLaptopCode,
+    FaBookOpen,
+    FaRobot,
+    FaLeaf,
   };
 
   const getIcon = (iconName) => {
