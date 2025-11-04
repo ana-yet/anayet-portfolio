@@ -430,22 +430,23 @@ export const githubStats = {
   followers: 156,
 };
 
-export const codeSnippet = `// Express.js REST API with Error Handling
-const express = require('express');
+export const codeSnippet = `//Express.js REST API with Error Handling
+const express = require("express");
+const User = require("../models/User");
+
 const router = express.Router();
 
-// Async handler wrapper
-const asyncHandler = fn => (req, res, next) => {
-  Promise.resolve(fn(req, res, next)).catch(next);
-};
-
-// Get user profile
-router.get('/profile/:id', asyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id);
+// GET: User Profile
+router.get("/profile/:id", async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findById(id);
 
   if (!user) {
-    return res.status(404).json({ message: 'User not found' });
+    return res.status(404).json({ success: false, message: "User not found" });
   }
 
-  res.json({ success: true, data: user });
-}));`;
+  res.status(200).json({ success: true, data: user });
+});
+
+module.exports = router;
+`;
