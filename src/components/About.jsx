@@ -22,6 +22,7 @@ import {
   FaAws,
   FaLightbulb,
   FaRocket,
+  FaLaptopCode,
 } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { aboutMe } from "@/lib/data";
@@ -44,6 +45,7 @@ const About = () => {
     FaReact,
     FaAws,
     SiMongodb,
+    FaLaptopCode,
   };
 
   const getIcon = (iconName) => {
@@ -280,7 +282,6 @@ const About = () => {
                         </h5>
                         <p className="text-gray-400 mb-2">{edu.institution}</p>
                         <p className="text-sm text-gray-500 mb-3">{edu.year}</p>
-                        <p className="text-gray-300">{edu.description}</p>
                       </div>
                     ))}
                   </div>
@@ -300,11 +301,21 @@ const About = () => {
                             whileHover={{ x: 5 }}
                             className="glass p-4 rounded-lg flex items-center gap-4"
                           >
-                            {Icon && (
-                              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                              {Icon && (
                                 <Icon className="text-primary text-xl" />
-                              </div>
-                            )}
+                              )}
+                              {/* {cert.logo && (
+                                <Image
+                                  src={cert.logo}
+                                  alt={cert.name}
+                                  width={50}
+                                  height={50}
+                                  className="object-contain"
+                                />
+                              )} */}
+                            </div>
+
                             <div className="flex-1">
                               <h5 className="font-bold">{cert.name}</h5>
                               <p className="text-sm text-gray-400">

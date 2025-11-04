@@ -5,50 +5,52 @@ export const personalInfo = {
   phone: "+88 01733-552322",
   location: "Habiganj, Bangladesh",
   avatar: "/images/avatar.jpg",
-  bio: "Crafting scalable web applications with MongoDB, Express, React, and Node.js. Turning ideas into elegant solutions.",
+  bio: "Crafting scalable web applications with MongoDB, Express, React, Next.Js and Node.js. Turning ideas into elegant solutions.",
   availability: "available", // available, busy, unavailable
   social: {
     github: "https://github.com/ana-yet",
     linkedin: "https://linkedin.com/in/ana-yet",
     twitter: "https://x.com/md_anayet_m",
-    dev: "https://dev.to/johndoe",
-    dribbble: "https://dribbble.com/johndoe",
+    // dev: "https://dev.to/johndoe",
+    // dribbble: "https://dribbble.com/johndoe",
   },
 };
 
 // Add to existing data.js file
 
 export const aboutMe = {
-  title: "Full Stack Developer & Problem Solver",
+  title: "MERN Stack Developer",
+
   description:
-    "I'm a passionate MERN stack developer who loves turning complex problems into simple, beautiful, and intuitive solutions. With over 4 years of experience, I've helped startups and enterprises build scalable web applications that users love.",
+    "I'm a passionate MERN stack developer who loves solving problems and turning ideas into impactful web applications. With a strong focus on clean code, performance, and user experience, I enjoy building scalable solutions using modern technologies like React, Next.js, Node.js, and MongoDB.",
 
   image: "/me.png",
 
   story: [
-    "My journey into web development started in 2019 when I built my first website for a local business. The excitement of seeing my code come to life and actually help someone solve a real problem got me hooked.",
-    "Since then, I've dedicated myself to mastering the MERN stack and modern web technologies. I believe in writing clean, maintainable code and creating exceptional user experiences.",
-    "When I'm not coding, you'll find me contributing to open-source projects, writing technical blogs, or mentoring aspiring developers. I'm a firm believer in giving back to the community that taught me so much.",
+    "My interest in technology started in childhood, but it truly took shape during my school days when I discovered the HTML chapter in the ICT book. That small spark led me to explore coding deeply.",
+    "I began my programming journey in October 2024 with C language, and soon after, I transitioned into web development, where I found my real passion. My first project, 'Bangladesh 2.0', built with just HTML and CSS, motivated me to learn more.",
+    "Since then, I've mastered the MERN stack and worked with technologies like React, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS. I’ve also gained team experience as a co-leader in a 6-member project called 'AgriSmart', where I managed both front-end and back-end development.",
+    "Beyond coding, I love reading, learning from podcasts, and helping others grow in tech. For me, development is not just about writing code — it's about continuous learning, collaboration, and creating something valuable for people.",
   ],
 
   highlights: [
+    // {
+    //   metric: "4+",
+    //   label: "Years Experience",
+    //   icon: "FaBriefcase",
+    // },
     {
-      metric: "4+",
-      label: "Years Experience",
-      icon: "FaBriefcase",
-    },
-    {
-      metric: "50+",
+      metric: "20+",
       label: "Projects Completed",
       icon: "FaProjectDiagram",
     },
+    // {
+    //   metric: "30+",
+    //   label: "Happy Clients",
+    //   icon: "FaUsers",
+    // },
     {
-      metric: "30+",
-      label: "Happy Clients",
-      icon: "FaUsers",
-    },
-    {
-      metric: "500+",
+      metric: "1K+",
       label: "GitHub Contributions",
       icon: "FaCode",
     },
@@ -86,37 +88,31 @@ export const aboutMe = {
       degree: "Bachelor of Social Science",
       institution: "National University of Bangladesh",
       year: "2025 - present",
-      description:
-        "Graduated with honors, specializing in Software Engineering and Web Technologies.",
+      // description:
+      //   "Graduated with honors, specializing in Software Engineering and Web Technologies.",
     },
   ],
 
   certifications: [
     {
+      name: "Next Level Web Development",
+      issuer: "Programming Hero",
+      year: "Ongoing",
+      icon: "FaLaptopCode",
+    },
+    {
       name: "Complete Web Development Course With Programming Hero",
       issuer: "Jhankar Mahhub",
       year: "2025",
-      icon: "SiMongodb",
-    },
-    {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2022",
-      icon: "FaAws",
-    },
-    {
-      name: "Meta React Advanced Certification",
-      issuer: "Meta (Coursera)",
-      year: "2022",
-      icon: "FaReact",
+      icon: "FaLaptopCode",
     },
   ],
 
   currentFocus: [
-    "Building AI-powered web applications",
-    "Exploring Web3 and Blockchain integration",
-    "Mastering Next.js 14+ and Server Components",
-    "Contributing to open-source MERN stack tools",
+    "Building AI-powered web applications using the MERN stack",
+    "Mastering Next.js 16 and modern server components",
+    // "Improving backend performance and API scalability",
+    // "Learning advanced problem-solving and software architecture",
   ],
 
   interests: [
