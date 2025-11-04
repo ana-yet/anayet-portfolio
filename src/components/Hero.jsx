@@ -15,9 +15,14 @@ const Hero = () => {
 
   const roles = [
     "MERN Stack Developer",
-    "Full Stack Engineer",
-    "Node.js Expert",
-    "React Specialist",
+    "Front-End Developer",
+    "Back-End Developer",
+    "Full Stack Developer",
+    "React Developer",
+    "Node.js Developer",
+    // "Full Stack Engineer",
+    // "Node.js Expert",
+    // "React Specialist",
   ];
 
   // Generate particles only on client side
