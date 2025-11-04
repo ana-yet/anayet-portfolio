@@ -16,12 +16,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <TechStack />
+      {/* <TechStack /> */}
       <Projects />
       <Skills />
-      <Experience />
+      {/* <Experience /> */}
       <GitHub />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </main>
