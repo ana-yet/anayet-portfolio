@@ -240,6 +240,12 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
     tags: ["MongoDB", "React", "Node.js", "Stripe"],
+    features: [
+      "Secure payment processing with Stripe integration",
+      "Real-time inventory management and tracking",
+      "Comprehensive admin dashboard for analytics",
+      "Responsive design with dark/light mode support",
+    ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/johndoe/ecommerce",
     status: "live",
@@ -253,6 +259,12 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop",
     tags: ["MongoDB", "React", "Socket.io", "Redis"],
+    features: [
+      "Instant messaging with Socket.io",
+      "End-to-end message encryption",
+      "File sharing and media support",
+      "Group chat rooms and private messaging",
+    ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/johndoe/chat",
     status: "live",
@@ -266,6 +278,12 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
     tags: ["MongoDB", "Next.js", "TypeScript", "Chart.js"],
+    features: [
+      "Drag-and-drop Kanban board interface",
+      "Real-time team collaboration features",
+      "Detailed project analytics and reporting",
+      "Task assignment and deadline tracking",
+    ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/johndoe/pm-tool",
     status: "in-progress",
@@ -279,6 +297,12 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop",
     tags: ["MongoDB", "React", "Express", "JWT"],
+    features: [
+      "Rich text markdown editor",
+      "User authentication and profile management",
+      "Comment system and article liking",
+      "SEO-friendly URL structure and meta tags",
+    ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/johndoe/blog",
     status: "live",
@@ -292,6 +316,12 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
     tags: ["MongoDB", "React", "D3.js", "GraphQL"],
+    features: [
+      "Interactive data visualization with D3.js",
+      "Real-time data updates via GraphQL subscriptions",
+      "Customizable report generation",
+      "User role management and access control",
+    ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/johndoe/analytics",
     status: "live",
@@ -305,6 +335,12 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop",
     tags: ["MongoDB", "React Native", "Socket.io", "AWS S3"],
+    features: [
+      "News feed with infinite scroll",
+      "Story posting and viewing",
+      "Real-time notifications",
+      "Friend request and connection system",
+    ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/johndoe/social",
     status: "live",

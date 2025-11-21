@@ -47,7 +47,7 @@ export default async function Home() {
   const { repos, forks, stars } = await getGitHubStats();
 
   return (
-    <main className="relative overflow-x-hidden">
+    <main className="relative">
       <Navbar />
       <Hero />
       <About />
