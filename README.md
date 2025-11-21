@@ -92,11 +92,7 @@ This project is optimized for deployment on [Vercel](https://vercel.com/).
 3.  Vercel will automatically detect Next.js and configure the build settings.
 4.  Click **Deploy**!
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 **MD ANAYET MIAH** - Full Stack Developer
-[GitHub](https://github.com/ana-yet) | [LinkedIn](https://linkedin.com/in/anayet)
+[GitHub](https://github.com/ana-yet) | [LinkedIn](https://linkedin.com/in/ana-yet)
