@@ -1,29 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaCodeBranch, FaStar, FaCopy } from "react-icons/fa";
-import { githubStats, codeSnippet } from "@/lib/data";
+import { FaGithub, FaCodeBranch, FaStar, FaCopy, FaBook } from "react-icons/fa";
+import { codeSnippet } from "@/lib/data";
 import { useState } from "react";
 
-const GitHub = () => {
+const GitHub = ({ repos, forks, stars }) => {
   const [copied, setCopied] = useState(false);
 
   const stats = [
     {
-      label: "Contributions This Year",
-      value: `${githubStats.contributions}+`,
-      icon: FaGithub,
-      color: "text-white",
-    },
-    {
       label: "Public Repositories",
-      value: githubStats.repositories,
-      icon: FaCodeBranch,
+      value: repos || 0,
+      icon: FaBook,
       color: "text-primary",
     },
     {
-      label: "Total Stars Received",
-      value: githubStats.stars,
+      label: "Total Forks",
+      value: forks || 0,
+      icon: FaCodeBranch,
+      color: "text-white",
+    },
+    {
+      label: "Total Stars",
+      value: stars || 0,
       icon: FaStar,
       color: "text-yellow-400",
     },
