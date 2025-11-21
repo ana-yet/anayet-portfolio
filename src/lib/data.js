@@ -11,12 +11,9 @@ export const personalInfo = {
     github: "https://github.com/ana-yet",
     linkedin: "https://linkedin.com/in/ana-yet",
     twitter: "https://x.com/md_anayet_m",
-    // dev: "https://dev.to/johndoe",
-    // dribbble: "https://dribbble.com/johndoe",
   },
 };
 
-// Add to existing data.js file
 
 export const aboutMe = {
   title: "MERN Stack Developer",
@@ -317,28 +314,29 @@ export const projects = [
 
 export const skills = {
   frontend: [
-    { name: "React.js", level: "Expert" },
-    { name: "JavaScript/ES6+", level: "Expert" },
-    { name: "CSS/Tailwind", level: "Advanced" },
-    { name: "TypeScript", level: "Advanced" },
-    { name: "HTML5", level: "Expert" },
-    { name: "Responsive Design", level: "Expert" },
+    { name: "React.js", icon: "FaReact" },
+    { name: "JavaScript", icon: "SiJavascript" },
+    { name: "Tailwind CSS", icon: "SiTailwindcss" },
+    { name: "TypeScript", icon: "SiTypescript" },
+    { name: "HTML5", icon: "SiHtml5" },
+    { name: "Next.js", icon: "SiNextdotjs" },
   ],
   backend: [
-    { name: "Node.js", level: "Expert" },
-    { name: "Express.js", level: "Expert" },
-    { name: "MongoDB", level: "Advanced" },
-    { name: "PostgreSQL", level: "Intermediate" },
-    { name: "JWT/Auth", level: "Advanced" },
-    { name: "GraphQL", level: "Intermediate" },
+    { name: "Node.js", icon: "FaNodeJs" },
+    { name: "Express.js", icon: "SiExpress" },
+    { name: "MongoDB", icon: "SiMongodb" },
+    { name: "REST API", icon: "TbApi" },
+    { name: "Socket.io", icon: "SiSocketdotio" },
+    { name: "JWT", icon: "SiJsonwebtokens" },
   ],
   tools: [
-    { name: "Git/GitHub", level: "Expert" },
-    { name: "Docker", level: "Advanced" },
-    { name: "AWS", level: "Intermediate" },
-    { name: "CI/CD", level: "Advanced" },
-    { name: "Linux/Bash", level: "Advanced" },
-    { name: "Testing (Jest)", level: "Intermediate" },
+    { name: "Git", icon: "FaGitAlt" },
+    { name: "Postman", icon: "SiPostman" },
+    { name: "Vercel", icon: "SiVercel" },
+    { name: "Netlify", icon: "SiNetlify" },
+    { name: "Firebase", icon: "SiFirebase" },
+    { name: "AI Tools", icon: "FaRobot" },
+
   ],
 };
 

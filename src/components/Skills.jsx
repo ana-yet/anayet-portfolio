@@ -1,8 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaPalette, FaServer, FaTools } from "react-icons/fa";
+import { FaPalette, FaServer, FaTools, FaReact, FaNodeJs, FaGitAlt, FaRobot } from "react-icons/fa";
+import { SiExpress, SiFirebase, SiHtml5, SiJavascript, SiJsonwebtokens, SiMongodb, SiNetlify, SiNextdotjs, SiPostman, SiSocketdotio, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+
 import { skills } from "@/lib/data";
+
+const iconMap = {
+  FaReact,
+  SiJavascript,
+  SiTailwindcss,
+  SiTypescript,
+  SiHtml5,
+  SiNextdotjs,
+  FaNodeJs,
+  SiExpress,
+  SiMongodb,
+  TbApi,
+  SiSocketdotio,
+  SiJsonwebtokens,
+  FaGitAlt,
+  SiPostman,
+  SiVercel,
+  SiNetlify,
+  SiFirebase,
+  FaRobot,
+};
 
 const Skills = () => {
   const skillCategories = [
@@ -81,20 +105,23 @@ const Skills = () => {
                 <h3 className="text-2xl font-bold">{category.title}</h3>
               </div>
 
-              <ul className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.li
-                    key={skillIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: skillIndex * 0.1 }}
-                    className="flex items-center justify-between"
-                  >
-                    <span>{skill.name}</span>
-                    <span className="text-sm text-gray-400">{skill.level}</span>
-                  </motion.li>
-                ))}
+              <ul className="grid grid-cols-2 gap-4">
+                {category.skills.map((skill, skillIndex) => {
+                  const Icon = iconMap[skill.icon];
+                  return (
+                    <motion.li
+                      key={skillIndex}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: skillIndex * 0.1 }}
+                      className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
+                    >
+                      {Icon && <Icon className="text-3xl mb-2 text-gray-300" />}
+                      <span className="text-sm font-medium text-gray-200">{skill.name}</span>
+                    </motion.li>
+                  );
+                })}
               </ul>
             </motion.div>
           ))}
