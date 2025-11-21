@@ -1,122 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-  FaHeart,
-  FaCheckCircle,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaArrowUp } from "react-icons/fa";
 import { personalInfo } from "@/lib/data";
-import { scrollToSection } from "@/lib/utils";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const quickLinks = [
-    { label: "Home", href: "home" },
-    { label: "Projects", href: "projects" },
-    { label: "Skills", href: "skills" },
-    { label: "Experience", href: "experience" },
-    { label: "Contact", href: "contact" },
-  ];
-
-  const services = [
-    "Web Development",
-    "API Development",
-    "Database Design",
-    "Code Review",
-    "Technical Consulting",
-  ];
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <footer className="py-12 px-6 bg-dark-card border-t border-gray-800">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* About */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-display font-bold gradient-text mb-4">
-              &lt;JD/&gt;
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Building exceptional digital experiences with modern web
-              technologies.
-            </p>
-            <div className="flex gap-3">
-              {[
-                { icon: FaGithub, url: personalInfo.social.github },
-                { icon: FaLinkedin, url: personalInfo.social.linkedin },
-                { icon: FaTwitter, url: personalInfo.social.twitter },
-              ].map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="text-gray-400 hover:text-primary transition-colors"
-                >
-                  <social.icon className="text-xl" />
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-400">
-              {services.map((service, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <FaCheckCircle className="text-primary text-sm" />
-                  {service}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400">
-            Built with <FaHeart className="inline text-red-500" /> using Next.js
-            & Tailwind CSS
+    <footer className="py-8 px-6 bg-dark-card/50 border-t border-gray-800 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Copyright */}
+        <div className="text-gray-400 text-sm text-center md:text-left">
+          <p>
+            © {currentYear} <span className="text-primary font-medium">{personalInfo.name}</span>. All rights reserved.
           </p>
-          <p className="text-gray-500 mt-2">
-            © {currentYear} {personalInfo.name}. All rights reserved.
+          <p className="mt-1 text-xs text-gray-500 flex items-center justify-center md:justify-start gap-1">
+            Built with <FaHeart className="text-red-500 animate-pulse" /> using Next.js
           </p>
         </div>
+
+        {/* Social Links */}
+        <div className="flex items-center gap-4">
+          {[
+            { icon: FaGithub, url: personalInfo.social.github, label: "GitHub" },
+            { icon: FaLinkedin, url: personalInfo.social.linkedin, label: "LinkedIn" },
+            { icon: FaTwitter, url: personalInfo.social.twitter, label: "Twitter" },
+          ].map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-primary/20 text-gray-400 hover:text-primary transition-all border border-transparent hover:border-primary/30"
+              aria-label={social.label}
+            >
+              <social.icon className="text-lg" />
+            </motion.a>
+          ))}
+        </div>
+
+        {/* Back to Top */}
+        <motion.button
+          onClick={scrollToTop}
+          whileHover={{ y: -5 }}
+          whileTap={{ scale: 0.9 }}
+          className="p-3 rounded-lg bg-white/5 hover:bg-primary/20 text-gray-400 hover:text-primary transition-all border border-transparent hover:border-primary/30 group"
+          aria-label="Back to Top"
+        >
+          <FaArrowUp className="group-hover:-translate-y-1 transition-transform" />
+        </motion.button>
       </div>
     </footer>
   );
