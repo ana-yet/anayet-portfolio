@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
@@ -13,16 +14,37 @@ export async function POST(request) {
       );
     }
 
-    // Here you would typically:
-    // 1. Send email using Nodemailer or SendGrid
-    // 2. Save to database
-    // 3. Send notification
+    // Create Transporter
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    // For now, just log it
-    console.log("Contact form submission:", { name, email, subject, message });
+    // Email Options
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      replyTo: email,
+      subject: `Portfolio Contact: ${subject}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333;">New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-top: 20px;">
+            <p><strong>Message:</strong></p>
+            <p style="white-space: pre-wrap;">${message}</p>
+          </div>
+        </div>
+      `,
+    };
 
-    // Simulate email sending delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Send Email
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
       { message: "Message sent successfully" },
