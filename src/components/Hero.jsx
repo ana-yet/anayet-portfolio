@@ -32,11 +32,14 @@ const Hero = () => {
 
     // Use requestAnimationFrame to defer state update
     const generateParticles = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
       const generatedParticles = Array.from({ length: 50 }, (_, i) => ({
         id: i,
-        initialX: Math.floor(Math.random() * 1000),
-        initialY: Math.floor(Math.random() * 600),
-        animateY: Math.floor(Math.random() * 600),
+        initialX: Math.floor(Math.random() * width),
+        initialY: Math.floor(Math.random() * height),
+        animateY: Math.floor(Math.random() * height),
         duration: Math.floor(Math.random() * 10) + 5,
       }));
       setParticles(generatedParticles);
