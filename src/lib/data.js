@@ -234,17 +234,19 @@ export const techStack = [
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "AgriSmart - AI powered smart farming system (Team Project)",
     description:
-      "Full-stack shopping platform with payment integration, real-time inventory, and admin dashboard.",
+      "A smart agriculture web application designed to help farmers get AI based crop advice, real time market prices, and manage their farm activities.",
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
     tags: ["MongoDB", "React", "Node.js", "Stripe"],
     features: [
-      "Secure payment processing with Stripe integration",
-      "Real-time inventory management and tracking",
-      "Comprehensive admin dashboard for analytics",
-      "Responsive design with dark/light mode support",
+      "AI based crop advice",
+      "Real-time market prices",
+      "Farm activity management",
+      "Knowledge Hub for farmers",
+      " Weather updates",
+      "Farmer community",
     ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/johndoe/ecommerce",
