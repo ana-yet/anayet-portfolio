@@ -66,12 +66,13 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 px-6">
+    <section id="skills" className="py-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -86,19 +87,19 @@ const Skills = () => {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
               variants={item}
-              whileHover={{ scale: 1.05 }}
-              className="glass p-8 rounded-2xl"
+              whileHover={{ y: -5 }}
+              className="glass p-8 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors"
             >
               <div className="text-center mb-6">
                 <div
-                  className={`w-16 h-16 bg-linear-to-br ${category.gradient} rounded-full flex items-center justify-center mx-auto mb-4`}
+                  className={`w-16 h-16 bg-gradient-to-br ${category.gradient} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}
                 >
                   <category.icon className="text-2xl text-white" />
                 </div>
@@ -111,14 +112,15 @@ const Skills = () => {
                   return (
                     <motion.li
                       key={skillIndex}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: skillIndex * 0.1 }}
-                      className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
+                      transition={{ delay: skillIndex * 0.05 }}
+                      whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                      className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 transition-all cursor-default group"
                     >
-                      {Icon && <Icon className="text-3xl mb-2 text-gray-300" />}
-                      <span className="text-sm font-medium text-gray-200">{skill.name}</span>
+                      {Icon && <Icon className="text-3xl mb-2 text-gray-300 group-hover:text-primary transition-colors" />}
+                      <span className="text-sm font-medium text-gray-200 text-center">{skill.name}</span>
                     </motion.li>
                   );
                 })}

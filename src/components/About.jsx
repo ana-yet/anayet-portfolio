@@ -83,14 +83,15 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 px-6 bg-gradient-to-b from-dark-card to-dark-bg"
+      className="py-20 px-6 bg-gradient-to-b from-dark-card to-dark-bg overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -107,7 +108,8 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 50 }}
             className="space-y-8"
           >
             {/* Profile Image */}
@@ -146,12 +148,12 @@ const About = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary/30 rounded-full"
+                className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary/30 rounded-full hidden md:block"
               />
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-4 -right-4 w-32 h-32 border-4 border-secondary/30 rounded-full"
+                className="absolute -bottom-4 -right-4 w-32 h-32 border-4 border-secondary/30 rounded-full hidden md:block"
               />
             </div>
 
@@ -160,7 +162,7 @@ const About = () => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="grid grid-cols-2 gap-4"
             >
               {aboutMe.highlights.map((highlight, index) => {
@@ -170,7 +172,7 @@ const About = () => {
                     key={index}
                     variants={item}
                     whileHover={{ scale: 1.05 }}
-                    className="glass p-6 rounded-xl text-center cursor-pointer"
+                    className="glass p-6 rounded-xl text-center cursor-pointer hover:border-primary/30 transition-colors"
                   >
                     {Icon && (
                       <Icon className="text-4xl mx-auto mb-3 text-primary" />
@@ -201,7 +203,8 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 50 }}
             className="space-y-6"
           >
             <div>
@@ -212,12 +215,12 @@ const About = () => {
             </div>
 
             {/* Tab Navigation */}
-            <div className="flex gap-2 border-b border-gray-700 pb-2">
+            <div className="flex gap-2 border-b border-gray-700 pb-2 overflow-x-auto">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-t-lg transition-all ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-t-lg transition-all whitespace-nowrap ${
                     activeTab === tab.id
                       ? "bg-primary text-white"
                       : "text-gray-400 hover:text-gray-200"
@@ -236,6 +239,7 @@ const About = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
                   className="space-y-4"
                 >
                   {aboutMe.story.map((paragraph, index) => (
@@ -273,6 +277,7 @@ const About = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
                   className="space-y-6"
                 >
                   {/* Education */}
@@ -282,7 +287,7 @@ const About = () => {
                       Education
                     </h4>
                     {aboutMe.education.map((edu, index) => (
-                      <div key={index} className="glass p-6 rounded-xl">
+                      <div key={index} className="glass p-6 rounded-xl mb-4">
                         <h5 className="text-lg font-bold text-primary">
                           {edu.degree}
                         </h5>
@@ -311,15 +316,6 @@ const About = () => {
                               {Icon && (
                                 <Icon className="text-primary text-xl" />
                               )}
-                              {/* {cert.logo && (
-                                <Image
-                                  src={cert.logo}
-                                  alt={cert.name}
-                                  width={50}
-                                  height={50}
-                                  className="object-contain"
-                                />
-                              )} */}
                             </div>
 
                             <div className="flex-1">
@@ -344,6 +340,7 @@ const About = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
                   className="space-y-6"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -397,7 +394,8 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
           className="mb-20"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
@@ -407,7 +405,7 @@ const About = () => {
             variants={container}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-50px" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {aboutMe.values.map((value, index) => {
@@ -417,10 +415,10 @@ const About = () => {
                   key={index}
                   variants={item}
                   whileHover={{ y: -10 }}
-                  className="gradient-border p-6 text-center cursor-pointer group"
+                  className="gradient-border p-6 text-center cursor-pointer group hover:bg-white/5 transition-colors"
                 >
                   {Icon && (
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-primary/20">
                       <Icon className="text-2xl text-white" />
                     </div>
                   )}
@@ -436,9 +434,10 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center glass p-12 rounded-2xl"
+          viewport={{ once: true, margin: "-50px" }}
+          className="text-center glass p-12 rounded-2xl relative overflow-hidden"
         >
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
           <h3 className="text-3xl font-bold mb-4">Want to work together?</h3>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             I&apos;m always open to discussing new projects, creative ideas, or

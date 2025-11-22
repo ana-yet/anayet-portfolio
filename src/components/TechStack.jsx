@@ -45,12 +45,13 @@ const TechStack = () => {
   };
 
   return (
-    <section id="tech-stack" className="py-20 px-6 relative">
+    <section id="tech-stack" className="py-20 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -66,13 +67,14 @@ const TechStack = () => {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
           {/* MongoDB */}
           <motion.div
             variants={item}
-            className="gradient-border p-6 cursor-pointer group"
+            whileHover={{ y: -5 }}
+            className="gradient-border p-6 cursor-pointer group hover:bg-white/5 transition-colors"
           >
             <div className="text-center">
               <SiMongodb
@@ -80,13 +82,13 @@ const TechStack = () => {
                 style={{ color: "#47A248" }}
               />
               <h3 className="text-xl font-bold mb-2">MongoDB</h3>
-              <div className="w-full bg-gray-700 rounded-full h-2 mt-4">
+              <div className="w-full bg-gray-700 rounded-full h-2 mt-4 overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "90%" }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  className="bg-linear-to-r from-green-400 to-green-600 h-2 rounded-full"
+                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                  className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
                 />
               </div>
               <p className="text-sm text-gray-400 mt-2">90% Proficiency</p>
@@ -96,18 +98,19 @@ const TechStack = () => {
           {/* Express */}
           <motion.div
             variants={item}
-            className="gradient-border p-6 cursor-pointer group"
+            whileHover={{ y: -5 }}
+            className="gradient-border p-6 cursor-pointer group hover:bg-white/5 transition-colors"
           >
             <div className="text-center">
               <SiExpress className="text-6xl mb-4 mx-auto text-white transition-transform group-hover:scale-110" />
               <h3 className="text-xl font-bold mb-2">Express.js</h3>
-              <div className="w-full bg-gray-700 rounded-full h-2 mt-4">
+              <div className="w-full bg-gray-700 rounded-full h-2 mt-4 overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "85%" }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.3 }}
-                  className="bg-linear-to-r from-gray-400 to-gray-600 h-2 rounded-full"
+                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+                  className="bg-gradient-to-r from-gray-400 to-gray-600 h-2 rounded-full"
                 />
               </div>
               <p className="text-sm text-gray-400 mt-2">85% Proficiency</p>
@@ -117,21 +120,22 @@ const TechStack = () => {
           {/* React - Spans 2 columns on mobile, stays same on desktop */}
           <motion.div
             variants={item}
-            className="gradient-border p-6 cursor-pointer md:col-span-2 group"
+            whileHover={{ y: -5 }}
+            className="gradient-border p-6 cursor-pointer md:col-span-2 group hover:bg-white/5 transition-colors"
           >
             <div className="text-center">
               <FaReact
-                className="text-8xl mb-4 mx-auto transition-transform group-hover:scale-110 group-hover:rotate-180 duration-500"
+                className="text-8xl mb-4 mx-auto transition-transform group-hover:scale-110 group-hover:rotate-180 duration-700"
                 style={{ color: "#61DAFB" }}
               />
               <h3 className="text-2xl font-bold mb-2">React.js</h3>
-              <div className="w-full bg-gray-700 rounded-full h-2 mt-4 max-w-md mx-auto">
+              <div className="w-full bg-gray-700 rounded-full h-2 mt-4 max-w-md mx-auto overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "95%" }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.4 }}
-                  className="bg-linear-to-r from-cyan-400 to-blue-600 h-2 rounded-full"
+                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.4 }}
+                  className="bg-gradient-to-r from-cyan-400 to-blue-600 h-2 rounded-full"
                 />
               </div>
               <p className="text-sm text-gray-400 mt-2">95% Proficiency</p>
@@ -141,7 +145,8 @@ const TechStack = () => {
           {/* Node.js - Spans 2 columns */}
           <motion.div
             variants={item}
-            className="gradient-border p-6 cursor-pointer md:col-span-2 group"
+            whileHover={{ y: -5 }}
+            className="gradient-border p-6 cursor-pointer md:col-span-2 group hover:bg-white/5 transition-colors"
           >
             <div className="text-center">
               <FaNodeJs
@@ -149,13 +154,13 @@ const TechStack = () => {
                 style={{ color: "#339933" }}
               />
               <h3 className="text-2xl font-bold mb-2">Node.js</h3>
-              <div className="w-full bg-gray-700 rounded-full h-2 mt-4 max-w-md mx-auto">
+              <div className="w-full bg-gray-700 rounded-full h-2 mt-4 max-w-md mx-auto overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "92%" }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.5 }}
-                  className="bg-linear-to-r from-green-400 to-green-600 h-2 rounded-full"
+                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                  className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
                 />
               </div>
               <p className="text-sm text-gray-400 mt-2">92% Proficiency</p>
@@ -165,7 +170,8 @@ const TechStack = () => {
           {/* Additional Tools */}
           <motion.div
             variants={item}
-            className="gradient-border p-6 cursor-pointer md:col-span-2"
+            whileHover={{ y: -5 }}
+            className="gradient-border p-6 cursor-pointer md:col-span-2 hover:bg-white/5 transition-colors"
           >
             <div className="text-center">
               <h3 className="text-xl font-bold mb-4">Plus More Tools</h3>
@@ -174,7 +180,7 @@ const TechStack = () => {
                   <motion.span
                     key={index}
                     whileHover={{ scale: 1.1 }}
-                    className="px-3 py-1 bg-dark-lighter rounded-full text-sm border border-primary/30 flex items-center gap-2"
+                    className="px-3 py-1 bg-dark-lighter rounded-full text-sm border border-primary/30 flex items-center gap-2 hover:border-primary transition-colors"
                   >
                     {tool.icon && typeof tool.icon === "function" && (
                       <tool.icon style={{ color: tool.color }} />

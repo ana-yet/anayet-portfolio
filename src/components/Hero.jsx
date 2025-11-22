@@ -11,7 +11,6 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
-  const [particles, setParticles] = useState([]);
 
   const roles = [
     "MERN Stack Developer",
@@ -20,34 +19,7 @@ const Hero = () => {
     "Full Stack Developer",
     "React Developer",
     "Node.js Developer",
-    // "Full Stack Engineer",
-    // "Node.js Expert",
-    // "React Specialist",
   ];
-
-  // Generate particles only on client side
-  useEffect(() => {
-    // Skip on server-side render to prevent hydration mismatch
-    if (typeof window === "undefined") return;
-
-    // Use requestAnimationFrame to defer state update
-    const generateParticles = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-
-      const generatedParticles = Array.from({ length: 50 }, (_, i) => ({
-        id: i,
-        initialX: Math.floor(Math.random() * width),
-        initialY: Math.floor(Math.random() * height),
-        animateY: Math.floor(Math.random() * height),
-        duration: Math.floor(Math.random() * 10) + 5,
-      }));
-      setParticles(generatedParticles);
-    };
-
-    // Defer particle generation to next animation frame
-    requestAnimationFrame(generateParticles);
-  }, []);
 
   // Effect for typing animation
   useEffect(() => {
@@ -80,30 +52,6 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* Particles Background - only render when particles are available */}
-      {particles.length > 0 && (
-        <div className="absolute inset-0 overflow-hidden">
-          {particles.map((particle) => (
-            <motion.div
-              key={particle.id}
-              className="absolute w-1 h-1 bg-primary/50 rounded-full"
-              initial={{
-                x: particle.initialX,
-                y: particle.initialY,
-              }}
-              animate={{
-                y: [null, particle.animateY],
-              }}
-              transition={{
-                duration: particle.duration,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
-          ))}
-        </div>
-      )}
-
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-card to-dark-bg opacity-90" />
 
