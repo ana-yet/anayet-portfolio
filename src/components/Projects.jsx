@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub, FaCheckCircle, FaArrowRight } from "react-icons/fa";
@@ -8,6 +8,14 @@ import { projects, personalInfo } from "@/lib/data";
 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const filteredProjects =
     filter === "all" ? projects : projects.filter((p) => p.status === filter);
@@ -69,10 +77,10 @@ const Projects = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5 }}
               style={{
-                top: `calc(4rem + ${index * 30}px)`,
+                top: isMobile ? "auto" : `calc(4rem + ${index * 30}px)`,
                 zIndex: index + 1,
               }}
-              className="sticky bg-dark-card border border-white/10 p-6 md:p-10 rounded-3xl shadow-2xl overflow-hidden min-h-[60vh] flex flex-col justify-center group/card"
+              className="relative md:sticky bg-dark-card border border-white/10 p-6 md:p-10 rounded-3xl shadow-2xl overflow-hidden min-h-[60vh] flex flex-col justify-center group/card"
             >
               {/* Card Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none" />
