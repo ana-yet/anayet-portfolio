@@ -254,98 +254,22 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Real-Time Chat Application",
+    title: "SoulMate – Matrimonial Web Platform",
     description:
-      "WebSocket-powered chat app with rooms, file sharing, typing indicators, and message encryption.",
+      "A matrimonial web platform designed to help people find their soulmate.",
     image:
       "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop",
-    tags: ["MongoDB", "React", "Socket.io", "Redis"],
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "Firebase", "Stripe", "Tailwind CSS"],
     features: [
-      "Instant messaging with Socket.io",
-      "End-to-end message encryption",
-      "File sharing and media support",
-      "Group chat rooms and private messaging",
+      "Create biodata and profile",
+      "Biodata serach and filtering",
+      "Premium membership using stripe payment",
+      "Real time chat"
     ],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/johndoe/chat",
+    liveUrl: "https://soul-m-ate.vercel.app/",
+    githubUrl: "https://github.com/ana-yet/soulmate-client",
     status: "live",
     featured: true,
-  },
-  {
-    id: 3,
-    title: "Project Management Tool",
-    description:
-      "Kanban-style project management with drag-and-drop, team collaboration, and analytics dashboard.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-    tags: ["MongoDB", "Next.js", "TypeScript", "Chart.js"],
-    features: [
-      "Drag-and-drop Kanban board interface",
-      "Real-time team collaboration features",
-      "Detailed project analytics and reporting",
-      "Task assignment and deadline tracking",
-    ],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/johndoe/pm-tool",
-    status: "in-progress",
-    featured: true,
-  },
-  {
-    id: 4,
-    title: "Blogging Platform",
-    description:
-      "Medium-like blogging platform with markdown editor, comments, likes, and SEO optimization.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop",
-    tags: ["MongoDB", "React", "Express", "JWT"],
-    features: [
-      "Rich text markdown editor",
-      "User authentication and profile management",
-      "Comment system and article liking",
-      "SEO-friendly URL structure and meta tags",
-    ],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/johndoe/blog",
-    status: "live",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Analytics Dashboard",
-    description:
-      "Business intelligence dashboard with real-time data visualization and custom reports.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-    tags: ["MongoDB", "React", "D3.js", "GraphQL"],
-    features: [
-      "Interactive data visualization with D3.js",
-      "Real-time data updates via GraphQL subscriptions",
-      "Customizable report generation",
-      "User role management and access control",
-    ],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/johndoe/analytics",
-    status: "live",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Social Network App",
-    description:
-      "Full-featured social platform with posts, stories, messaging, and friend connections.",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop",
-    tags: ["MongoDB", "React Native", "Socket.io", "AWS S3"],
-    features: [
-      "News feed with infinite scroll",
-      "Story posting and viewing",
-      "Real-time notifications",
-      "Friend request and connection system",
-    ],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/johndoe/social",
-    status: "live",
-    featured: false,
   },
 ];
 

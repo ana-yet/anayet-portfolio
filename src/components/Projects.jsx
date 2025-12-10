@@ -67,7 +67,7 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        <div className="relative flex flex-col gap-8 pb-24">
+        <div className="relative flex flex-col gap-8">
           {displayProjects.map((project, index) => (
             <motion.div
               key={project.id}
