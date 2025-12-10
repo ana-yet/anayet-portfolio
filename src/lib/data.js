@@ -37,7 +37,7 @@ export const aboutMe = {
     //   icon: "FaBriefcase",
     // },
     {
-      metric: "20+",
+      metric: "10+",
       label: "Projects Completed",
       icon: "FaProjectDiagram",
     },
@@ -106,8 +106,7 @@ export const aboutMe = {
   ],
 
   currentFocus: [
-    "Building AI-powered web applications using the MERN stack",
-    "Mastering Next.js 16 and modern server components",
+    "TypeScript, Next.js, PostgreSQL, Node.js",
   ],
 
   interests: [

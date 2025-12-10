@@ -55,11 +55,10 @@ const Projects = () => {
               <button
                 key={filterType}
                 onClick={() => setFilter(filterType)}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all border ${
-                  filter === filterType
-                    ? "bg-primary/10 border-primary text-primary shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)]"
-                    : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
-                }`}
+                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all border ${filter === filterType
+                  ? "bg-primary/10 border-primary text-primary shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)]"
+                  : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
+                  }`}
               >
                 {filterType.charAt(0).toUpperCase() +
                   filterType.slice(1).replace("-", " ")}
@@ -80,7 +79,7 @@ const Projects = () => {
                 top: isMobile ? "auto" : `calc(4rem + ${index * 30}px)`,
                 zIndex: index + 1,
               }}
-              className="relative md:sticky bg-dark-card border border-white/10 p-6 md:p-10 rounded-3xl shadow-2xl overflow-hidden min-h-[60vh] flex flex-col justify-center group/card"
+              className="relative md:sticky bg-dark-card border border-white/10 p-6 md:p-10 rounded-3xl overflow-hidden min-h-[60vh] flex flex-col justify-center group/card"
             >
               {/* Card Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -88,9 +87,8 @@ const Projects = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                 {/* Project Image (Browser Window Style) */}
                 <div
-                  className={`relative ${
-                    index % 2 === 1 ? "lg:order-2" : ""
-                  }`}
+                  className={`relative ${index % 2 === 1 ? "lg:order-2" : ""
+                    }`}
                 >
                   <div className="relative rounded-xl bg-dark-bg border border-white/10 shadow-2xl overflow-hidden group hover:transform hover:scale-[1.02] transition-all duration-500">
                     {/* Browser Header */}
@@ -124,11 +122,10 @@ const Projects = () => {
                       0{index + 1}.
                     </span>
                     <span
-                      className={`px-3 py-1 text-xs font-medium rounded-full border ${
-                        project.status === "live"
-                          ? "bg-green-500/10 border-green-500/20 text-green-400"
-                          : "bg-yellow-500/10 border-yellow-500/20 text-yellow-400"
-                      }`}
+                      className={`px-3 py-1 text-xs font-medium rounded-full border ${project.status === "live"
+                        ? "bg-green-500/10 border-green-500/20 text-green-400"
+                        : "bg-yellow-500/10 border-yellow-500/20 text-yellow-400"
+                        }`}
                     >
                       {project.status === "live" ? "Live Project" : "In Development"}
                     </span>
@@ -200,24 +197,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* See All Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <a
-            href={personalInfo.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-dark-card hover:bg-dark-lighter border border-white/10 hover:border-primary/50 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.2)] group"
-          >
-            <span>View Full Project Archive</span>
-            <FaArrowRight className="group-hover:translate-x-1 transition-transform text-primary" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
