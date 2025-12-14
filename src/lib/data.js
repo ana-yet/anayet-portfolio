@@ -14,14 +14,13 @@ export const personalInfo = {
   },
 };
 
-
 export const aboutMe = {
   title: "MERN Stack Developer",
 
   description:
     "I'm a passionate MERN stack developer who loves solving problems and turning ideas into impactful web applications. With a strong focus on clean code, performance, and user experience, I enjoy building scalable solutions using modern technologies like React, Next.js, Node.js, and MongoDB.",
 
-  image: "/me.png",
+  image: "/me.jpg",
 
   story: [
     "My interest in technology started in childhood, but it truly took shape during my school days when I discovered the HTML chapter in the ICT book. That small spark led me to explore coding deeply.",
@@ -105,9 +104,7 @@ export const aboutMe = {
     },
   ],
 
-  currentFocus: [
-    "TypeScript, Next.js, PostgreSQL, Node.js",
-  ],
+  currentFocus: ["TypeScript, Next.js, PostgreSQL, Node.js"],
 
   interests: [
     {
@@ -238,7 +235,16 @@ export const projects = [
       "A smart agriculture web application designed to help farmers get AI based crop advice, real time market prices, and manage their farm activities.",
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
-    tags: ["Next.js", "React", "MongoDB", "Mongoose", "Node.js", "Express.js", "Socket.io", "Tailwind CSS"],
+    tags: [
+      "Next.js",
+      "React",
+      "MongoDB",
+      "Mongoose",
+      "Node.js",
+      "Express.js",
+      "Socket.io",
+      "Tailwind CSS",
+    ],
     features: [
       "AI based crop advice",
       "Real-time market prices",
@@ -259,12 +265,21 @@ export const projects = [
       "A matrimonial web platform designed to help people find their soulmate.",
     image:
       "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop",
-    tags: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "Firebase", "Stripe", "Tailwind CSS"],
+    tags: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.io",
+      "Firebase",
+      "Stripe",
+      "Tailwind CSS",
+    ],
     features: [
       "Create biodata and profile",
       "Biodata serach and filtering",
       "Premium membership using stripe payment",
-      "Real time chat"
+      "Real time chat",
     ],
     liveUrl: "https://soul-m-ate.vercel.app/",
     githubUrl: "https://github.com/ana-yet/soulmate-client",
@@ -297,7 +312,6 @@ export const skills = {
     { name: "Netlify", icon: "SiNetlify" },
     { name: "Firebase", icon: "SiFirebase" },
     { name: "AI Tools", icon: "FaRobot" },
-
   ],
 };
 
