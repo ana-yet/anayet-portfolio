@@ -367,10 +367,10 @@ export const testimonials = [
 ];
 
 export const githubStats = {
-  contributions: 500,
-  repositories: 45,
-  stars: 234,
-  followers: 156,
+  contributions: "1500+",
+  repositories: 50,
+  stars: 20,
+  followers: 5,
 };
 
 export const codeSnippet = `//Express.js REST API with Error Handling

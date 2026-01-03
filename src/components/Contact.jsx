@@ -77,21 +77,38 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // Using EmailJS for static site
+      // You need to configure EmailJS:
+      // 1. Sign up at https://www.emailjs.com/
+      // 2. Create an email service
+      // 3. Create an email template
+      // 4. Get your Public Key, Service ID, and Template ID
+      // 5. Add them to your .env.local file or replace the values below
 
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setSubmitStatus("error");
-      }
+      const emailjs = (await import('@emailjs/browser')).default;
+
+      // Replace these with your EmailJS credentials
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'MD ANAYET MIAH',
+        },
+        publicKey
+      );
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -138,9 +155,8 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${
-                      errors.name ? "border-red-500" : "border-gray-700"
-                    } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-white placeholder-gray-500`}
+                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.name ? "border-red-500" : "border-gray-700"
+                      } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-white placeholder-gray-500`}
                     placeholder="John Doe"
                   />
                   {errors.name && (
@@ -157,9 +173,8 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${
-                      errors.email ? "border-red-500" : "border-gray-700"
-                    } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-white placeholder-gray-500`}
+                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.email ? "border-red-500" : "border-gray-700"
+                      } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-white placeholder-gray-500`}
                     placeholder="john@example.com"
                   />
                   {errors.email && (
@@ -176,9 +191,8 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${
-                      errors.subject ? "border-red-500" : "border-gray-700"
-                    } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-white placeholder-gray-500`}
+                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.subject ? "border-red-500" : "border-gray-700"
+                      } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-white placeholder-gray-500`}
                     placeholder="Project Inquiry"
                   />
                   {errors.subject && (
@@ -195,9 +209,8 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="5"
-                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${
-                      errors.message ? "border-red-500" : "border-gray-700"
-                    } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none text-white placeholder-gray-500`}
+                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.message ? "border-red-500" : "border-gray-700"
+                      } rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none text-white placeholder-gray-500`}
                     placeholder="Tell me about your project..."
                   />
                   {errors.message && (
