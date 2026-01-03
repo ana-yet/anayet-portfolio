@@ -1,9 +1,9 @@
 export const personalInfo = {
   name: "MD ANAYET MIAH",
-  title: "MERN Stack Developer",
+  title: "Full Stack Developer",
   email: "mdanayet.dev@gmail.com",
   phone: "+88 01733-552322",
-  location: "Habiganj, Bangladesh",
+  location: "Sylhet, Bangladesh",
   avatar: "/images/avatar.jpg",
   bio: "Crafting scalable web applications with MongoDB, Express, React, Next.Js and Node.js. Turning ideas into elegant solutions.",
   availability: "available", // available, busy, unavailable
@@ -318,49 +318,19 @@ export const skills = {
 export const experience = [
   {
     id: 1,
-    role: "Senior MERN Developer",
-    company: "TechCorp Inc.",
-    period: "2023 - Present",
+    role: "MERN Developer Internship",
+    company: "Kode By Kraft",
+    period: "2026 - Present",
     current: true,
     description:
-      "Leading development of enterprise-level web applications using MERN stack. Mentoring junior developers and implementing best practices.",
+      "Developing web applications using MERN stack.",
     achievements: [
-      "Architected microservices handling 1M+ daily users",
-      "Reduced API response time by 60%",
-      "Led team of 5 developers",
-    ],
-    color: "primary",
-  },
-  {
-    id: 2,
-    role: "Full Stack Developer",
-    company: "StartupXYZ",
-    period: "2021 - 2023",
-    current: false,
-    description:
-      "Developed and maintained multiple client projects using React, Node.js, and MongoDB. Collaborated with design team for optimal UX.",
-    achievements: [
-      "Built 10+ production applications",
-      "Implemented CI/CD pipelines",
-      "Improved code coverage to 85%",
-    ],
-    color: "secondary",
-  },
-  {
-    id: 3,
-    role: "Junior Developer",
-    company: "WebAgency Pro",
-    period: "2020 - 2021",
-    current: false,
-    description:
-      "Started my professional journey building responsive websites and learning full-stack development fundamentals.",
-    achievements: [
-      "Converted designs to responsive code",
+      "Learned MERN stack fundamentals",
       "Collaborated with senior developers",
       "Learned MERN stack fundamentals",
     ],
-    color: "accent",
-  },
+    color: "primary",
+  }
 ];
 
 export const testimonials = [

@@ -73,11 +73,10 @@ const Experience = () => {
 
                 {/* Content */}
                 <div
-                  className={`ml-20 md:ml-0 ${
-                    index % 2 === 0
-                      ? "md:mr-auto md:w-5/12 md:pr-12 md:text-right"
-                      : "md:ml-auto md:w-5/12 md:pl-12 md:text-left"
-                  }`}
+                  className={`ml-20 md:ml-0 ${index % 2 === 0
+                    ? "md:mr-auto md:w-5/12 md:pr-12 md:text-right"
+                    : "md:ml-auto md:w-5/12 md:pl-12 md:text-left"
+                    }`}
                 >
                   <motion.div
                     whileHover={{ scale: 1.02 }}
@@ -85,9 +84,8 @@ const Experience = () => {
                   >
                     {/* Arrow for desktop */}
                     <div
-                      className={`hidden md:block absolute top-6 w-4 h-4 bg-dark-card border-t border-l border-white/10 rotate-45 ${
-                        index % 2 === 0 ? "-right-2 border-r-0 border-b-0" : "-left-2 border-t-0 border-l-0 border-r border-b"
-                      }`}
+                      className={`hidden md:block absolute top-6 w-4 h-4 bg-dark-card border-t border-l border-white/10 rotate-45 ${index % 2 === 0 ? "-right-2 border-r-0 border-b-0" : "-left-2 border-t-0 border-l-0 border-r border-b"
+                        }`}
                     />
 
                     <div className={`flex items-center mb-2 ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"} justify-between`}>
@@ -110,7 +108,7 @@ const Experience = () => {
 
                     <ul className={`space-y-2 text-sm text-gray-300 ${index % 2 === 0 ? "md:items-end" : "md:items-start"} flex flex-col`}>
                       {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-2 text-left">
+                        <li key={i} className={`flex items-start gap-2 ${index % 2 === 0 ? "md:flex-row-reverse md:text-right" : "text-left"}`}>
                           <FaCheckCircle className="text-green-400 mt-1 shrink-0" />
                           <span>{achievement}</span>
                         </li>

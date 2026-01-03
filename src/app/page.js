@@ -54,7 +54,7 @@ export default async function Home() {
       {/* <TechStack /> */}
       <Projects />
       <Skills />
-      {/* <Experience /> */}
+      <Experience />
       <GitHub repos={repos} forks={forks} stars={stars} />
       {/* <Testimonials /> */}
       <Contact />
