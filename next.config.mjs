@@ -3,7 +3,16 @@ const nextConfig = {
   /* config options here */
   allowedDevOrigins: ["local-origin.dev", "*.local-origin.dev"],
   images: {
-    domains: ["images.unsplash.com", "i.pravatar.cc"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+      },
+    ],
   },
 };
 
