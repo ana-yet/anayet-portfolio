@@ -101,9 +101,9 @@ const Experience = () => {
                     </div>
 
                     <h3 className="text-2xl font-bold mb-1 text-white">{exp.role}</h3>
-                    <h4 className="text-lg mb-3 font-medium" style={{ color: exp.color === "primary" ? "var(--color-primary)" : "#10b981" }}>
+                    <p className="text-lg mb-3 font-medium" style={{ color: exp.color === "primary" ? "var(--color-primary)" : "#10b981" }} aria-label={`Company: ${exp.company}`}>
                       {exp.company}
-                    </h4>
+                    </p>
                     <p className="text-gray-400 mb-4 text-sm leading-relaxed">{exp.description}</p>
 
                     <ul className={`space-y-2 text-sm text-gray-300 ${index % 2 === 0 ? "md:items-end" : "md:items-start"} flex flex-col`}>

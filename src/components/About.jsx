@@ -118,10 +118,11 @@ const About = () => {
                 <div className="relative w-full h-full bg-dark-card">
                   <Image
                     src={aboutMe.image}
-                    alt="Profile"
+                    alt={`${aboutMe.title} - MD ANAYET MIAH, Full Stack Developer from Sylhet, Bangladesh`}
                     fill
                     className="object-cover rounded-lg"
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   />
                   {/* Overlay decoration */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/80 to-transparent" />

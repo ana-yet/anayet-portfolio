@@ -14,7 +14,7 @@ export default function Home() {
   const { repositories, stars } = githubStats;
 
   return (
-    <main className="relative">
+    <main id="main-content" className="relative">
       <Navbar />
       <Hero />
       <About />

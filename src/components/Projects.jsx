@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub, FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { projects, personalInfo } from "@/lib/data";
+import { generateProjectSchema } from "@/lib/structuredData";
 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
@@ -68,7 +69,9 @@ const Projects = () => {
         </motion.div>
 
         <div className="relative flex flex-col gap-8">
-          {displayProjects.map((project, index) => (
+          {displayProjects.map((project, index) => {
+            const projectSchema = generateProjectSchema(project);
+            return (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
@@ -81,6 +84,11 @@ const Projects = () => {
               }}
               className="relative md:sticky bg-dark-card border border-white/10 p-6 md:p-10 rounded-3xl overflow-hidden min-h-[60vh] flex flex-col justify-center group/card"
             >
+              {/* Structured Data for Project */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+              />
               {/* Card Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
@@ -103,9 +111,11 @@ const Projects = () => {
                     <div className="relative aspect-video overflow-hidden">
                       <Image
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} - ${project.description.substring(0, 60)}...`}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        priority={index === 0}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-dark-bg/20 group-hover:bg-transparent transition-colors duration-300" />
                     </div>
@@ -195,7 +205,8 @@ const Projects = () => {
                 </div>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

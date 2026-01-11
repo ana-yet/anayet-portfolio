@@ -60,9 +60,10 @@ const Testimonials = () => {
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
                   <Image
                     src={testimonial.avatar}
-                    alt={testimonial.name}
+                    alt={`${testimonial.name}, ${testimonial.role}`}
                     fill
                     className="object-cover"
+                    sizes="64px"
                   />
                 </div>
                 <div>
@@ -106,9 +107,10 @@ const Testimonials = () => {
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
                   <Image
                     src={testimonials[currentIndex].avatar}
-                    alt={testimonials[currentIndex].name}
+                    alt={`${testimonials[currentIndex].name}, ${testimonials[currentIndex].role}`}
                     fill
                     className="object-cover"
+                    sizes="64px"
                   />
                 </div>
                 <div>

@@ -5,7 +5,7 @@ export const personalInfo = {
   phone: "+88 01733-552322",
   location: "Sylhet, Bangladesh",
   avatar: "/images/avatar.jpg",
-  bio: "Crafting scalable web applications with MongoDB, Express, React, Next.Js and Node.js. Turning ideas into elegant solutions.",
+  bio: "Crafting scalable web applications with MongoDB, Express, React, Next.js and Node.js. Turning ideas into elegant solutions.",
   availability: "available", // available, busy, unavailable
   social: {
     github: "https://github.com/ana-yet",
@@ -18,7 +18,7 @@ export const aboutMe = {
   title: "MERN Stack Developer",
 
   description:
-    "I'm a passionate MERN stack developer who loves solving problems and turning ideas into impactful web applications. With a strong focus on clean code, performance, and user experience, I enjoy building scalable solutions using modern technologies like React, Next.js, Node.js, and MongoDB.",
+    "I'm a passionate MERN stack developer from Sylhet, Bangladesh, who loves solving problems and turning ideas into impactful web applications. With a strong focus on clean code, performance, and user experience, I specialize in building scalable solutions using modern technologies like React, Next.js, Node.js, Express.js, and MongoDB. Available for freelance projects and full-time opportunities.",
 
   image: "/me.jpg",
 
@@ -232,7 +232,7 @@ export const projects = [
     id: 1,
     title: "AgriSmart - AI powered smart farming system (Team Project)",
     description:
-      "A smart agriculture web application designed to help farmers get AI based crop advice, real time market prices, and manage their farm activities.",
+      "A comprehensive smart agriculture web application built with Next.js and MERN stack, designed to help farmers get AI-based crop advice, real-time market prices, weather updates, and manage their farm activities efficiently. Features include Socket.io for real-time communication and MongoDB for data management.",
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
     tags: [
@@ -262,7 +262,7 @@ export const projects = [
     id: 2,
     title: "SoulMate – Matrimonial Web Platform",
     description:
-      "A matrimonial web platform designed to help people find their soulmate.",
+      "A full-featured matrimonial web platform built with React, Node.js, and MongoDB, designed to help people find their soulmate. Features include profile creation, advanced search and filtering, premium Stripe payment integration, and real-time chat functionality using Socket.io.",
     image:
       "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop",
     tags: [
@@ -277,7 +277,7 @@ export const projects = [
     ],
     features: [
       "Create biodata and profile",
-      "Biodata serach and filtering",
+      "Biodata search and filtering",
       "Premium membership using stripe payment",
       "Real time chat",
     ],
